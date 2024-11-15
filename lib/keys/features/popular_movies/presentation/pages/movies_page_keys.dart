@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 const Key moviePageScaffoldKey = Key('moviePageScaffoldKey');
 
 /// Movie page appbar key.
-const Key moviePageAppbarKey = Key('moviePageScaffold_appbarKey');
+const Key moviePageAppbarKey = Key('moviePage_appbarKey');
 
 /// Movie page grid view list key.
 const Key moviePageSliverGridViewListKey =
-    Key('moviePageScaffold_sliverGridViewListKey');
+    Key('moviePage_sliverGridViewListKey');
 
 /// Movie page grid view list item key.
 Key moviePageSliverGridViewListItemKey(int index) =>
-    Key('${index}_moviePageScaffold_sliverGridViewListItemKey');
+    Key('${index}_moviePage_sliverGridViewListItemKey');
 
-/// Movie page error dialog key.
-const Key moviePageAlertDialogKey = Key('moviePageScaffold_errorDialogKey');
+/// Movie page loading indicator key.
+const Key moviePageLoadingIndicatorKey = Key('moviePage_loadingIndicatorKey');

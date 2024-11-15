@@ -75,7 +75,6 @@ class _MovieCardState extends State<MovieCard>
       animation: _controller,
       builder: (context, child) {
         return Container(
-          key: movieCardShimmerPlaceholderKey,
           width: double.infinity,
           height: 250,
           decoration: BoxDecoration(

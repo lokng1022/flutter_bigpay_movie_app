@@ -66,7 +66,10 @@ class _MoviePageState extends State<MoviePage> {
           _setPopularMoviesCubitListener(state),
       builder: (_, state) {
         if (state is PopularMoviesLoadingState && _moviesList.isEmpty) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(
+            key: moviePageLoadingIndicatorKey,
+            child: CircularProgressIndicator(),
+          );
         }
 
         return CustomScrollView(
@@ -120,7 +123,6 @@ class _MoviePageState extends State<MoviePage> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        key: moviePageAlertDialogKey,
         title: const Text(
           "Error",
           style: TextStyle(
@@ -149,7 +151,6 @@ class _MoviePageState extends State<MoviePage> {
   @override
   void dispose() {
     _scrollController.dispose();
-    BlocProvider.of<PopularMoviesCubit>(context).close();
 
     super.dispose();
   }
